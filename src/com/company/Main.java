@@ -2,7 +2,15 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
+
+		Human me = new Human();
+		Car passat = new Car("vw", "passat");
+		me.car = passat;
+	}
+}
+
+    	/*
 	Animal dog = new Animal("dog");
 	dog.name = "szarik";
 
@@ -43,5 +51,5 @@ public class Main {
 	System.out.println(kacper.pet.species);
 
 */
-    }
-}
+
+

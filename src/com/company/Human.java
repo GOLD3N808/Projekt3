@@ -2,5 +2,9 @@ package com.company;
 
 public class Human {
 
-    Human pet = new Human();
+    String firstName;
+    String lastName;
+    Phone phone;
+    Animal pet;
+    Car car;
 }
