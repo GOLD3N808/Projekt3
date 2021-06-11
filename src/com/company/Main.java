@@ -7,6 +7,12 @@ public class Main {
 		Human me = new Human();
 		Car passat = new Car("vw", "passat");
 		me.car = passat;
+
+		me.setPesel1("123456789");
+		me.pesel2 = "123456789";
+
+		System.out.println(me.getPesel1());
+		System.out.println(me.pesel2);
 	}
 }
 

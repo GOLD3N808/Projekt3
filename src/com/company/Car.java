@@ -7,6 +7,7 @@ public class Car {
     public double millage;
     public String color;
     public double engineVolume;
+    double value;
 
     public Car(String producer, String model){
         this.producer = producer;

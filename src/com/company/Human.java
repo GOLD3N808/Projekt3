@@ -6,5 +6,16 @@ public class Human {
     String lastName;
     Phone phone;
     Animal pet;
-    Car car;
+    private Car car;
+
+    private String pesel1;
+    public String pesel2;
+
+    public String getPesel1(){
+        return pesel1;
+    }
+
+    public void setPesel1(String pesel){
+        this.pesel1 = pesel;
+    }
 }
