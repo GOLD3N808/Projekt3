@@ -24,4 +24,5 @@ public class Phone extends Device {
         System.out.println("wcisnij przycik");
     }
 
+
 }

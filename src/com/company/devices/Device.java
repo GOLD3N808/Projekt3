@@ -20,4 +20,5 @@ package com.company.devices;
 
     abstract public void turnOn();
 
+
 }
