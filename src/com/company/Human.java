@@ -1,12 +1,26 @@
 package com.company;
 
-public class Human {
+import com.company.Animal;
+
+public class Human extends Animal {
+
+    private static final String HUMAN_SPECIES;
 
     String firstName;
     String lastName;
     Phone phone;
     Animal pet;
-    private Car car;
+    Car car;
+    private Double salary;
+
+    public Human(String lastName) {
+        super(HUMAN_SPECIES);
+        this.lastName = lastName;
+    }
+
+    public Double getSalary(){
+
+    }
 
     private String pesel1;
     public String pesel2;

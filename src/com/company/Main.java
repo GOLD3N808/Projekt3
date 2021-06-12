@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Human me = new Human();
+		Human me = new Human("Kowalski");
 		Car passat = new Car("vw", "passat");
 		me.Car = passat;
 
@@ -14,7 +14,12 @@ public class Main {
 		System.out.println(me.getPesel1());
 		System.out.println(me.pesel2);
 
-		Human be = new Human();
+		me.setSalary(414141);
+
+		me.feed();
+		me.takeForWalk();
+		System.out.println(me.species);
+		me.printName();
 
 	}
 }

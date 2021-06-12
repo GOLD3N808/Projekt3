@@ -1,13 +1,15 @@
 package com.company;
 
-public class Car {
+import com.company.devices.Device;
 
-    public final String producer;
-    public final String model;
+public class Car extends Device {
+
+
     public double millage;
     public String color;
     public double engineVolume;
     double value;
+    public String Car;
 
     public Car(String producer, String model){
         this.producer = producer;

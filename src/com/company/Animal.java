@@ -25,7 +25,7 @@ public class Animal {
     }
 
 
-    void feed(){
+    public void feed(){
         if (this.weight > 0) {
 
             this.weight *= 1.1;
