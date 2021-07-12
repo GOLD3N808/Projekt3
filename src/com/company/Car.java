@@ -8,12 +8,14 @@ public class Car {
     public String producer;
     public String color;
     public int yearOfProduction;
+    public Double value;
 
-    Car(String model, String producer, String color, int yearOfProduction){
+    public Car(String model, String producer, String color, int yearOfProduction){
         this.model = model;
         this.producer = producer;
         this.color = color;
         this.yearOfProduction = yearOfProduction;
+        this.value = value;
 
 
 

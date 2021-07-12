@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		Human me = new Human();
 		Car passat = new Car("vw", "passat", "brown", 2005);
-		me.car = passat;
+	//me.car = passat;
 
 
 		Animal szarik = new Animal("dog");
