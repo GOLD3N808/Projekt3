@@ -1,10 +1,27 @@
 package com.company;
 
-public class Animal   {
+public class Animal implements salleable   {
 
     final public String species;
     private Double weight;
     String name;
+
+    public void sell(Human seller, Human buyer, Double price)
+    {
+        if (seller.pet != null)
+        {
+            if (buyer.cash >= price)
+            {
+                seller.cash += price;
+                buyer.cash -= price;
+
+                buyer.pet = seller.pet;
+                seller.pet = null;
+
+                System.out.println("Zwierzę zostało sprzedane za: " + price + "pieniędzy");
+            }
+        }
+    }
 
     public String toString(){
         return "species: "+species+"weight: "+weight+"name: "+name;

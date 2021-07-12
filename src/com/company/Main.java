@@ -25,29 +25,35 @@ public class Main {
 		Q7.TurnOn();
 		samsung.TurnOn();
 
+		Human seller = new Human();
+		Human buyer = new Human();
+		buyer.cash = 2300.0;
+		seller.phone = new Phone();
+		seller.pet = new Animal("owczarek");
+		seller.phone.sell(seller, buyer, 543.5);
+		seller.pet.sell(seller, buyer, 394.5);
+
+
+
+
+
+
 		szarik.feed();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-		szarik.takeForWalk();
-
-
-
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
+				szarik.takeForWalk();
 	}
 }
-
-
-
-

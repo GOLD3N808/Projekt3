@@ -1,17 +1,21 @@
 package com.company;
 import java.util.Date;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 import com.company.devices.Car;
 
 public class Human {
 
 
+    public Phone phone;
     String firstName;
     String lastName;
     Animal pet;
     private Car car;
     private Double salary;
     private String pesel;
+    public Double cash = 0.0;
 
     public String toString(){
         return "firstName: "+firstName+"lastName:  "+lastName+"pet:"+pet+" car: "+car+"salary:  "+salary+"pesel:"+pesel;
