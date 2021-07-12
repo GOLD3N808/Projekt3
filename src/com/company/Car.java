@@ -19,10 +19,13 @@ public class Car {
 
 
 
+    }
 
+    public boolean equals(Object obj) {
+        return (this == obj);
+    }
 
-
-
-
+    public String toString(){
+        return "model: "+model+"producer: "+producer+"color: "+color+"yearOfProduction: "+ yearOfProduction +"value: "+value;
     }
 }

@@ -5,10 +5,17 @@ import com.company.Animal;
 public class Human {
 
 
+    String firstName;
+    String lastName;
     Animal pet;
     private Car car;
     private Double salary;
     private String pesel;
+
+    public String toString(){
+        return "firstName: "+firstName+"lastName:  "+lastName+"pet:"+pet+" car: "+car+"salary:  "+salary+"pesel:"+pesel;
+    }
+
 
 
     public String getPesel() {

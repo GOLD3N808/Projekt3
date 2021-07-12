@@ -2,8 +2,10 @@ package com.company;
 
 import com.company.devices.Device;
 
-public class Phone extends Device {
+public class Phone {
 
+    public String producer;
+    public String model;
     public Double ScreenSize;
     public String os;
 
@@ -11,18 +13,9 @@ public class Phone extends Device {
         return "producer "+producer+"model "+model+"Screen "+ScreenSize+"os "+os;
     }
 
-    public Phone(String producer, String model, String yearOfproduction){
-        super(producer, model, yearOfproduction);
-    }
 
-    public void turnOn(){
-        System.out.println("wcisnij przycik");
-        System.out.println("wcisnij przycik");
-        System.out.println("wcisnij przycik");
-        System.out.println("wcisnij przycik");
-        System.out.println("wcisnij przycik");
-        System.out.println("wcisnij przycik");
-    }
+
+
 
 
 }

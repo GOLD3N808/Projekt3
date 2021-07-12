@@ -6,6 +6,11 @@ public class Animal   {
     private Double weight;
     String name;
 
+    public String toString(){
+        return "species: "+species+"weight: "+weight+"name: "+name;
+    }
+
+
     public Animal(String species){
         this.species = species;
 
