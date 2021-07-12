@@ -1,6 +1,6 @@
 package com.company;
 
-public class Animal {
+public class Animal   {
 
     final public String species;
     private Double weight;
@@ -45,19 +45,5 @@ public class Animal {
         }
     }
 
-    void printName(){
-        System.out.println("my name is:" + this.name);
-    }
 
-    void printNameAndOwner(String owner){
-        System.out.println(owner + "has" + this.name);
-    }
-
-    Double getWeight(){
-        return this.weight;
-    }
-
-    String getNameAndOwner(String owner){
-        return owner + "has" + this.name;
-    }
 }

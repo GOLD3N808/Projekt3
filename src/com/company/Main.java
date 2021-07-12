@@ -4,25 +4,31 @@ import com.company.devices.Device;
 public class Main {
 
 	public static void main(String[] args) {
-
-		Human me = new Human("Kowalski");
-		Car passat = new Car("vw", "passat", "yearOfproduction");
+		Human me = new Human();
 
 
-		me.setPesel1("123456789");
-		me.pesel2 = "123456789";
-
-		System.out.println(me.getPesel1());
-		System.out.println(me.pesel2);
+		Animal szarik = new Animal("dog");
+		me.pet = szarik;
 
 
+		szarik.feed();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
+		szarik.takeForWalk();
 
-
-
-		me.feed();
-		me.takeForWalk();
-		System.out.println(me.species);
-		me.printName();
 
 
 
