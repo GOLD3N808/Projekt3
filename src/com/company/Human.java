@@ -1,6 +1,7 @@
 package com.company;
 import java.util.Date;
-import com.company.Animal;
+
+import com.company.devices.Car;
 
 public class Human {
 

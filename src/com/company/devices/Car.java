@@ -1,16 +1,15 @@
-package com.company;
+package com.company.devices;
 
 import com.company.devices.Device;
 
-public class Car {
+public class Car extends Device {
 
-    public String model;
-    public String producer;
+
+
     public String color;
-    public int yearOfProduction;
     public Double value;
 
-    public Car(String model, String producer, String color, int yearOfProduction){
+    public Car(String producer, String model, int yearOfProduction, String color, Double value){
         this.model = model;
         this.producer = producer;
         this.color = color;
@@ -19,6 +18,11 @@ public class Car {
 
 
 
+    }
+
+    public void TurnOn()
+    {
+        System.out.println("Car turning on");
     }
 
     public boolean equals(Object obj) {

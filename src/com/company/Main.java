@@ -1,14 +1,15 @@
 package com.company;
-import com.company.devices.Device;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Human me = new Human();
-		Car passat = new Car("vw", "passat", "brown", 2005);
+		Car passat = new Car("vw", "passat", 2005, "brown", 2000.5);
 	me.setCar(passat);
 
-		Car corsa = new Car("Opel","Corsa","yellow", 2000);
+		Car corsa = new Car("Opel","Corsa", 2000, "yellow", 2023.5);
 		boolean areEqual = passat.equals(corsa);
 
 		Animal szarik = new Animal("dog");
@@ -19,8 +20,10 @@ public class Main {
 		System.out.println(me.toString());
 		Phone nokia = new Phone();
 		System.out.println(nokia.toString());
-
-
+		Car Q7 = new Car("Audi", "Q7", 2017,"black", 70000.5);
+		Phone samsung = new Phone();
+		Q7.TurnOn();
+		samsung.TurnOn();
 
 		szarik.feed();
 		szarik.takeForWalk();
