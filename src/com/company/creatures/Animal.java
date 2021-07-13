@@ -1,12 +1,17 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal implements salleable   {
+import com.company.Human;
+
+public abstract class Animal implements Feedable {
 
     final public String species;
     private Double weight;
     String name;
+    public Animal(String species) {
+        this.species = species;
+    }
 
-    public void sell(Human seller, Human buyer, Double price)
+ /* public void sell(Human seller, Human buyer, Double price)
     {
         if (seller.pet != null)
         {
@@ -22,13 +27,13 @@ public class Animal implements salleable   {
             }
         }
     }
-
+*/
     public String toString(){
         return "species: "+species+"weight: "+weight+"name: "+name;
     }
 
 
-    public Animal(String species){
+    public Animal(Double weight, String species){
         this.species = species;
 
         switch(this.species){
@@ -48,15 +53,19 @@ public class Animal implements salleable   {
 
 
 
-    public void feed(){
+
+    public void feed () {
         if (this.weight > 0) {
 
             this.weight *= 1.1;
             System.out.println("thx for food, my weight:" + this.weight);
         } else {
-            System.out.println("teraz za pozno");
+            //  System.out.println("teraz za pozno");
         }
     }
+
+
+
 
     void takeForWalk(){
         if(this.weight > 0){

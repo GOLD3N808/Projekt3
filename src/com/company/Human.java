@@ -1,9 +1,9 @@
 package com.company;
 import java.util.Date;
+
+import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
-
-import com.company.devices.Car;
 
 public class Human {
 

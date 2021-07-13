@@ -1,4 +1,5 @@
 package com.company;
+import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -11,12 +12,12 @@ public class Main {
 
 		Car corsa = new Car("Opel","Corsa", 2000, "yellow", 2023.5);
 		boolean areEqual = passat.equals(corsa);
-
+/*
 		Animal szarik = new Animal("dog");
 		me.pet = szarik;
 		System.out.println(szarik);
 		System.out.println(passat.toString());
-		System.out.println(szarik.toString());
+		System.out.println(szarik.toString());*/
 		System.out.println(me.toString());
 		Phone nokia = new Phone();
 		System.out.println(nokia.toString());
@@ -27,7 +28,7 @@ public class Main {
 
 		Human seller = new Human();
 		Human buyer = new Human();
-		buyer.cash = 2300.0;
+	/*uyer.cash = 2300.0;
 		seller.phone = new Phone();
 		seller.pet = new Animal("owczarek");
 		seller.phone.sell(seller, buyer, 543.5);
@@ -54,6 +55,6 @@ public class Main {
 				szarik.takeForWalk();
 				szarik.takeForWalk();
 				szarik.takeForWalk();
-				szarik.takeForWalk();
+				szarik.takeForWalk();*/
 	}
 }
