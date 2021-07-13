@@ -24,7 +24,8 @@ LPG saab1 = new LPG("saab", "900", "blue", 2005, 23000.0);
         buyer.garage[0] = saab2;
         saab2.sell(seller, buyer, 5555.0);
 
-
+            System.out.println("Czy doszlo miedzy nimi do transakcji ? : " + saab2.czyAsprzedalB(seller, buyer));
+            System.out.println("Czy auto mialo wlasciciela ? : " + saab2.czyMialWlasciciela());
 
 
 	}
