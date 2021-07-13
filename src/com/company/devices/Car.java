@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.devices.Device;
 
-public class Car extends Device {
+public abstract class Car extends Device {
 
 
 
@@ -31,5 +31,9 @@ public class Car extends Device {
 
     public String toString(){
         return "model: "+model+"producer: "+producer+"color: "+color+"yearOfProduction: "+ yearOfProduction +"value: "+value;
+
+
     }
+
+    abstract void refuel();
 }
