@@ -4,6 +4,9 @@ import java.util.Date;
 import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.*;
 
 public class Human {
 
@@ -12,10 +15,18 @@ public class Human {
     String firstName;
     String lastName;
     Animal pet;
-    private Car car;
-    private Double salary;
+
     private String pesel;
     public Double cash = 0.0;
+    public Car[] garage;
+    public Double salary;
+    public Car car;
+
+
+    public Human()
+    {
+        garage = new Car[2];
+    }
 
     public String toString(){
         return "firstName: "+firstName+"lastName:  "+lastName+"pet:"+pet+" car: "+car+"salary:  "+salary+"pesel:"+pesel;
@@ -33,34 +44,51 @@ public class Human {
         this.pesel = pesel;
     }
 
-
-    public double getSalary() {
-
-        System.out.println(new Date());
-        System.out.println("wypłata " + this.salary);
-        return salary;
-
-    }
-
-    public void setSalary(double salary) {
-        if (salary < 0) {
-            System.out.println("Wartość wypłaty nie może być ujemna");
-        }
-
-        System.out.println("Nowe dane zostały wysłane do systemu");
-
-        System.out.println("Jest koniecznosc odebrania aneksu do umowy od pani Hani z kadr");
-
-        System.out.println("ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu");
-
-        this.salary = salary;
-    }
-
-    public Car getCar() {
+    public Car getCar(int parking)
+    {
         return this.car;
     }
 
-    public void setCar(Car newCar) {
+    public double getGarageValue()
+    {
+        double value1 = 0;
+
+        for(int i = 0; i< garage.length; i++){
+
+            value1 += garage[i].value;
+
+        }
+
+        return value1;
+    }
+
+    public void sortCars()
+    {
+        Double[] cars = new Double []{ garage[0].value, garage[1].value, garage[2].value};
+        Car[] tempCars = new Car[]{};
+
+        Arrays.sort(cars);
+
+        for(int i = 0; i< garage.length; i++){
+
+            if (garage[i].value == cars[0])
+            {
+                tempCars[0] = garage[i];
+            }
+            if (garage[i].value == cars[1])
+            {
+                tempCars[1] = garage[i];
+            }
+            if (garage[i].value == cars[2])
+            {
+                tempCars[2] = garage[i];
+            }
+
+        }
+    }
+
+
+    public void setCar(Car newCar, int parking) {
         if (salary > newCar.value) {
             System.out.println("Samochód udało się kupić za gotówkę");
             this.car = newCar;

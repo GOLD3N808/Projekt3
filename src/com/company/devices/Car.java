@@ -1,8 +1,10 @@
 package com.company.devices;
+import com.company.Human;
+import com.company.devices.salleable;
 
 import com.company.devices.Device;
 
-public abstract class Car extends Device {
+public abstract class Car extends Device implements salleable {
 
 
 
@@ -19,6 +21,47 @@ public abstract class Car extends Device {
 
 
     }
+    public void sell(Human seller, Human buyer, Double price)
+    {
+        try
+        {
+            if (seller.garage.length == 0)
+            {
+                throw new IllegalAccessException("Sprzedajacy nie ma aut");
+            }
+            if (buyer.garage[0] != null && buyer.garage[1] != null && buyer.garage[2] != null)
+            {
+                throw new IllegalAccessException("Kupujacy nie ma miejsca w garazu");
+            }
+            if (buyer.cash < price)
+            {
+                throw new IllegalAccessException("Kupujacy nie ma pieniedzy");
+            }
+
+            if (buyer.garage[0] == null)
+            {
+                buyer.garage[0] = this;
+            }
+            if (buyer.garage[1] == null)
+            {
+                buyer.garage[1] = this;
+            }
+            if (buyer.garage[2] == null)
+            {
+                buyer.garage[2] = this;
+            }
+
+            seller.cash += price;
+            buyer.cash -= price;
+
+            System.out.println("Transakcja sprzedazy auta powiodla sie");
+        }
+        catch(IllegalAccessException e)
+        {
+            System.out.println("caught in main.");
+        }
+    }
+
 
     public void TurnOn()
     {

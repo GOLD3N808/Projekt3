@@ -17,7 +17,12 @@ LPG saab1 = new LPG("saab", "900", "blue", 2005, 23000.0);
         Opel1.refuel();
         Opel2.refuel();
 
-
+        Human seller = new Human();
+        Human buyer = new Human();
+        buyer.cash = 255.0;
+        Car saab2 = new LPG("saab", "900", "blue", 2005, 23000.0);
+        buyer.garage[0] = saab2;
+        saab2.sell(seller, buyer, 5555.0);
 
 
 
