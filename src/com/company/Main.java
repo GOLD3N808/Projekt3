@@ -28,6 +28,7 @@ public class Main {
 
 
 
+
                 /*LPG saab1 = new LPG("saab", "900", "blue", 2005, 23000.0);
                 Diesel Opel1 = new Diesel("Opel", "Omega", "black", 2011, 3000.0);
                 Electric Opel2 = new Electric("Opel", "Astra", "green", 2020, 23000.5);
