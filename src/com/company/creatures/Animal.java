@@ -7,7 +7,10 @@ public abstract class Animal implements Feedable {
     final public String species;
     private Double weight;
     String name;
+
+
     public Animal(String species) {
+
         this.species = species;
     }
 
@@ -38,43 +41,58 @@ public abstract class Animal implements Feedable {
 
         switch(this.species){
             case "dog":
-                this.weight = 10.2;
+                this.weight = 10.0;
                 break;
             case "cat":
-                this.weight = 2.0;
+                this.weight = 5.0;
                 break;
             case "mouse":
-                this.weight = 0.01;
-                break;
+                this.weight = 0.1;
             default:
                 this.weight = 1.0;
         }
+    }
+
+  /*  public void setWeight(Double weight)
+    {
+        this.weight = weight;
+    }*/
+
+    public void feed(int foodWeight)
+    {
+        System.out.println("thx for food" + foodWeight);
     }
 
 
 
 
     public void feed () {
-        if (this.weight > 0) {
+       if (this.weight > 0) {
 
-            this.weight *= 1.1;
+            this.weight += 1.0;
             System.out.println("thx for food, my weight:" + this.weight);
-        } else {
-            //  System.out.println("teraz za pozno");
+        } else
+        {
+            System.out.println("teraz za pozno");
         }
     }
 
 
 
 
-    void takeForWalk(){
+
+
+  /*  void takeForWalk(){
         if(this.weight > 0){
-            this.weight -= 1.0;
+            this.weight -= 0.1;
             System.out.println("thx, nice walk, my weight:" + this.weight);
-        }else{
+        }else
+        {
             System.out.println("nie mozna lazic z martwym zwierzakiem");
         }
-    }
+    }*/
+
+
 
 
 }

@@ -7,7 +7,7 @@ public class FarmAnimal extends Animal implements Edbile {
 
     public void beEaten()
     {
-        System.out.println("Be Eaten");
+        System.out.println("zjedzony");
     }
 
     public FarmAnimal(String species)
