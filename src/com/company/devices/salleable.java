@@ -1,4 +1,6 @@
-package com.company;
+package com.company.devices;
+
+import com.company.Human;
 
 public interface salleable {
 

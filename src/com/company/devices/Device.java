@@ -1,12 +1,12 @@
 package com.company.devices;
 import com.company.Human;
-import com.company.creatures.salleable;
 
-    public abstract class Device implements salleable {
+public abstract class Device implements salleable {
 
      String producer;
      String model;
      int yearOfProduction;
+     Double value1;
 
         public void sell(Human seller, Human buyer, Double price)
         {

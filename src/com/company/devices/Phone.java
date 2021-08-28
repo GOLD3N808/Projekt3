@@ -26,7 +26,7 @@ public class Phone extends Device {
         return Arrays.asList(aplikacje).stream().filter(o -> o.nazwa.equals(nazwaAplikacji)).findFirst().isPresent();
     }
 
-    public int iloscAplikacji();
+  /*  public int iloscAplikacji();
     {
         return aplikacje.length;
     }
@@ -51,7 +51,7 @@ public class Phone extends Device {
         }
 
         System.out.println("Nie mozna zainstalowac");
-    }
+    }*/
 
 
 
