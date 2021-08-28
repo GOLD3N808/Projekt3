@@ -60,7 +60,7 @@ public abstract class Animal implements Feedable {
 
     public void feed(int foodWeight)
     {
-        System.out.println("thx for food" + foodWeight);
+        System.out.println("thx forr food" + foodWeight);
     }
 
 
