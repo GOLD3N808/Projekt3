@@ -7,6 +7,6 @@ public class Diesel extends Car {
     }
     public void refuel()
     {
-        System.out.println("Refuel the diesel");
+        System.out.println("dolej ropy");
     }
 }

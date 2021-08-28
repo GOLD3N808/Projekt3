@@ -8,6 +8,6 @@ public class LPG extends Car {
 
     public void refuel()
     {
-        System.out.println("Refuel the lpg");
+        System.out.println("dolej gazu");
     }
 }

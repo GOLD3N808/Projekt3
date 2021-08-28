@@ -15,7 +15,7 @@ public class Main {
         public static void main(String[] args) {
 
 
-                FarmAnimal PinkPretty = new FarmAnimal("cat");
+              /*  FarmAnimal PinkPretty = new FarmAnimal("cat");
                 Pet LittleMonster = new Pet("mouse");
 
                 PinkPretty.feed();
@@ -23,20 +23,22 @@ public class Main {
                 LittleMonster.feed();
                 LittleMonster.feed(1);
 
-                PinkPretty.beEaten();
+                PinkPretty.beEaten();*/
 
 
 
 
 
-                /*LPG saab1 = new LPG("saab", "900", "blue", 2005, 23000.0);
+
+
+                LPG saab1 = new LPG("saab", "900", "blue", 2005, 23000.0);
                 Diesel Opel1 = new Diesel("Opel", "Omega", "black", 2011, 3000.0);
                 Electric Opel2 = new Electric("Opel", "Astra", "green", 2020, 23000.5);
                 saab1.refuel();
                 Opel1.refuel();
                 Opel2.refuel();
 
-                Human seller = new Human();
+               /* Human seller = new Human();
                 Human buyer = new Human();
                 buyer.cash = 255.0;
                 Car saab2 = new LPG("saab", "900", "blue", 2005, 23000.0);
@@ -56,6 +58,19 @@ public class Main {
                 System.out.println("Czy juz ma taka aplikacje? : " + HTC.czyJuzZainstalowana("justup"));
                 System.out.println("Ilosc aplikacji: " + HTC.iloscAplikacji());
                 HTC.wypiszAplikacje();*/
+
+
+                Phone HTC = new Phone("HTC","X32", 2017,200.39, "windows");
+                String version = Phone.version;
+                String serverAddress = Phone.serverAddress;
+                String appNames[] = Phone.appNames;
+
+                HTC.installAnnApp("JUSTUP");
+                HTC.installAnnApp("JUSTUP", version);
+                HTC.installAnnApp("JUSTUP", version, serverAddress);
+                HTC.installAnnApp(appNames);
+
+
 
         }
 }

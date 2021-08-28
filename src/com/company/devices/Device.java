@@ -32,7 +32,10 @@ public abstract class Device implements salleable {
             return "producer "+producer+"model"+model+"yearOfproduction"+yearOfProduction;
     }
 
-    abstract void TurnOn();
+    public abstract void TurnOn();
+    {
+
+    }
 
 
 

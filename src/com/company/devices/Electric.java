@@ -7,6 +7,6 @@ public class Electric extends Car {
     }
     public void refuel()
     {
-        System.out.println("Load battery");
+        System.out.println("naladuj accu");
     }
 }

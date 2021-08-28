@@ -25,7 +25,7 @@ public abstract class Car extends Device implements salleable {
 
 
     }
-    public void sell(Human seller, Human buyer, Double price)
+  /*  public void sell(Human seller, Human buyer, Double price)
     {
         try
         {
@@ -98,7 +98,7 @@ public abstract class Car extends Device implements salleable {
             return true;
         }
         return false;
-    }
+    }*/
 
 
 
@@ -107,7 +107,7 @@ public abstract class Car extends Device implements salleable {
         System.out.println("Car turning on");
     }
 
-    public boolean equals(Object obj) {
+   /* public boolean equals(Object obj) {
         return (this == obj);
     }
 
@@ -115,7 +115,10 @@ public abstract class Car extends Device implements salleable {
         return "model: "+model+"producer: "+producer+"color: "+color+"yearOfProduction: "+ yearOfProduction +"value: "+value;
 
 
-    }
+    }*/
 
-    abstract void refuel();
+    abstract public void refuel();
+    {
+
+    }
 }

@@ -9,14 +9,27 @@ import com.company.devices.Device;
 
 public class Phone extends Device {
 
-    public static final String address = "www.jakasstrona.com";
+    public Double ScreenSize;
+    public String os;
+    public String appName;
+    public static final String serverAddress = "www.jakasstrona.com";
     public static final String version = "1.0.0";
     public static final String protocol = "http";
-    public String appName;
-    public Application[] aplikacje;
-    public int numerAplikacji = 0;
+    /*public Application[] aplikacje;
+    public int numerAplikacji = 0;*/
 
-    public Phone()
+    public static String appNames[] = {"App Store ", "Booking ", "Shazam" };
+
+    public Phone(String producer, String model, int yearOfProduction, Double ScreenSize, String os)
+    {
+        this.producer = producer;
+        this. model = model;
+        this.yearOfProduction = yearOfProduction;
+        this.ScreenSize = ScreenSize;
+        this.os = os;
+    }
+
+   /* public Phone()
     {
         aplikacje = new Application[12];
     }
@@ -24,7 +37,7 @@ public class Phone extends Device {
     public boolean czyJuzZainstalowana(String nazwaAplikacji)
     {
         return Arrays.asList(aplikacje).stream().filter(o -> o.nazwa.equals(nazwaAplikacji)).findFirst().isPresent();
-    }
+    }*/
 
   /*  public int iloscAplikacji();
     {
@@ -55,12 +68,11 @@ public class Phone extends Device {
 
 
 
-    public Double ScreenSize;
-    public String os;
 
-    public String toString(){
+
+   /* public String toString(){
         return "producer "+producer+"model "+model+"Year of production:"+yearOfProduction+"Screen"+ScreenSize+"os "+os;
-    }
+    }*/
 
     public void TurnOn()
     {
@@ -71,24 +83,29 @@ public class Phone extends Device {
 
     public void installAnnApp(String appName)
     {
+        System.out.println(appName);
 
     }
     public void installAnnApp(String appName, String version)
     {
+        System.out.println("Nazwa aplikacji: "+ appName + " wersja: " + version);
 
     }
     public void installAnnApp(String appName, String version, String serverAddress)
     {
+        System.out.println("Nazwa aplikacji: "+ appName + " wersja: " + version + " adres serwera: " + serverAddress);
+
+    }
+    public void installAnnApp(String appNames[])
+    {
+        System.out.println(appNames);
 
     }
     public void installAnnApp(URL urlAppObject)
     {
 
     }
-    public void installAnnApp(List<String> appNames)
-    {
 
-    }
 
 
 
