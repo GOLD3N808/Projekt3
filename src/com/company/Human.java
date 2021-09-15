@@ -4,9 +4,9 @@ import java.util.Date;
 import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.*;
+import com.company.devices.Device;
 
 public class Human {
 
@@ -18,87 +18,91 @@ public class Human {
 
     private String pesel;
     public Double cash = 0.0;
-    public Car[] garage;
     public Double salary;
-    public Car car;
+    public Car[] garage;
+    public double rozmiar;
+
+
+
 
 
     public Human()
     {
-        garage = new Car[2];
+        garage = new Car[5];
     }
 
-    public String toString(){
-        return "firstName: "+firstName+"lastName:  "+lastName+"pet:"+pet+" car: "+car+"salary:  "+salary+"pesel:"+pesel;
+   /* public garageHuman()
+    {
+        this.rozmiar = rozmiar;
+    }*/
+
+    public Car getCar( int nrMiejscaParkingowego)
+    {
+        return this.garage[nrMiejscaParkingowego];
+    }
+
+    public void setCar(Car noweAuto, int nrMiejscaParkingowego)
+    {
+        if (salary > noweAuto.cena)
+        {
+            System.out.println("Samochód udało się kupić za gotówkę");
+            this.garage[nrMiejscaParkingowego] = noweAuto;
+        }
+        else if (salary > noweAuto.cena/24)
+        {
+            System.out.println("Udało się kupić na kredyt (no trudno)");
+            this.garage[nrMiejscaParkingowego] = noweAuto;
+        }
+        else
+        {
+            System.out.println("Zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
+        }
+    }
+
+    public double carsValue(Device wartosc)
+    {
+         wartosc.value = 0.0;
+
+        for (int i = 0; i< garage.length; i++)
+
+        {
+            wartosc.value += garage[i].cena;
+        }
+
+        return wartosc.value;
+    }
+
+   /* public void sortowanieSamochodow()
+    {
+
+    }*/
+
+
+
+
+
+    public String toString()
+    {
+        return "firstName: "+firstName+"lastName:  "+lastName+"pet:"+pet +"salary:  "+salary+"pesel:"+pesel;
     }
 
 
 
-    public String getPesel() {
-
+    public String getPesel()
+    {
         return pesel;
     }
 
-    public void setPesel(String pesel) {
-
+    public void setPesel(String pesel)
+    {
         this.pesel = pesel;
     }
 
-    public Car getCar(int parking)
-    {
-        return this.car;
-    }
-
-    public double getGarageValue()
-    {
-        double value1 = 0;
-
-        for(int i = 0; i< garage.length; i++){
-
-            value1 += garage[i].value;
-
-        }
-
-        return value1;
-    }
-
-    public void sortCars()
-    {
-        Double[] cars = new Double []{ garage[0].value, garage[1].value, garage[2].value};
-        Car[] tempCars = new Car[]{};
-
-        Arrays.sort(cars);
-
-        for(int i = 0; i< garage.length; i++){
-
-            if (garage[i].value == cars[0])
-            {
-                tempCars[0] = garage[i];
-            }
-            if (garage[i].value == cars[1])
-            {
-                tempCars[1] = garage[i];
-            }
-            if (garage[i].value == cars[2])
-            {
-                tempCars[2] = garage[i];
-            }
-
-        }
+    public double getSalary() {
+        System.out.println(new Date());
+        System.out.println("wartość wypłaty " + this.salary);
+        return salary;
     }
 
 
-    public void setCar(Car newCar, int parking) {
-        if (salary > newCar.value) {
-            System.out.println("Samochód udało się kupić za gotówkę");
-            this.car = newCar;
-        } else if (salary > newCar.value / 12) {
-            System.out.println("Udało się kupić na kredyt (no trudno)");
-            this.car = newCar;
-        } else {
-            System.out.println("Zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
-        }
-
-
-    }
 }

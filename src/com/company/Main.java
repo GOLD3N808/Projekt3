@@ -25,18 +25,34 @@ public class Main {
 
                 PinkPretty.beEaten();*/
 
+                Human gosc = new Human();
+                Car saab = new LPG("rgsg","ffff", "gg",565,344.0);
+                gosc.getCar(1);
+                gosc.setCar(saab, 1);
+                //gosc.carsValue(345.7);
+                Human seller = new Human();
+                Human buyer = new Human();
+                buyer.cash = 1000.0;
+                seller.cash = 2000.0;
+                buyer.garage[0] = saab;
+                saab.sell(seller, buyer, 333.0);
 
 
 
 
 
 
-                LPG saab1 = new LPG("saab", "900", "blue", 2005, 23000.0);
+
+
+
+
+
+               /* LPG saab1 = new LPG("saab", "900", "blue", 2005, 23000.0);
                 Diesel Opel1 = new Diesel("Opel", "Omega", "black", 2011, 3000.0);
                 Electric Opel2 = new Electric("Opel", "Astra", "green", 2020, 23000.5);
                 saab1.refuel();
                 Opel1.refuel();
-                Opel2.refuel();
+                Opel2.refuel();*/
 
                /* Human seller = new Human();
                 Human buyer = new Human();
@@ -60,7 +76,7 @@ public class Main {
                 HTC.wypiszAplikacje();*/
 
 
-                Phone HTC = new Phone("HTC","X32", 2017,200.39, "windows");
+               /* Phone HTC = new Phone("HTC","X32", 2017,200.39, "windows");
                 String version = Phone.version;
                 String serverAddress = Phone.serverAddress;
                 String appNames[] = Phone.appNames;
@@ -68,7 +84,7 @@ public class Main {
                 HTC.installAnnApp("JUSTUP");
                 HTC.installAnnApp("JUSTUP", version);
                 HTC.installAnnApp("JUSTUP", version, serverAddress);
-                HTC.installAnnApp(appNames);
+                HTC.installAnnApp(appNames);*/
 
 
 

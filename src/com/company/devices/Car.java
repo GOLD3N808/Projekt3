@@ -13,6 +13,8 @@ public abstract class Car extends Device implements salleable {
     public Double value;
     public Human[] owners;
     public int iloscTransakcji;
+    public double cena;
+    public double rozmiar;
 
     public Car(String producer, String model, int yearOfProduction, String color, Double value){
         this.model = model;
@@ -25,80 +27,40 @@ public abstract class Car extends Device implements salleable {
 
 
     }
-  /*  public void sell(Human seller, Human buyer, Double price)
+    public void sell(Human seller, Human buyer, Double price)
     {
-        try
+
         {
-            if (seller.garage.length == 0)
+            if (seller.garage == null && seller.garage.length == 0 )
             {
-                throw new IllegalAccessException("Sprzedajacy nie ma aut");
+                System.out.println("Sprzedajacy nie ma samochodow");
             }
-            if (buyer.garage[0] != null && buyer.garage[1] != null && buyer.garage[2] != null)
+            if (buyer.garage != null)
             {
-                throw new IllegalAccessException("Kupujacy nie ma miejsca w garazu");
+                System.out.println("Kupujacy nie ma miejsca w garazu");
             }
-            if (buyer.cash < price)
+            if (buyer.cash < cena)
             {
-                throw new IllegalAccessException("Kupujacy nie ma pieniedzy");
-            }
-            if (this.owners[2] != seller)
-            {
-                throw new IllegalAccessException("Sprzedajacy nie jest aktualnym wlascicielem");
+                System.out.println("Kupujacy nie ma pieniedzy");
             }
 
-            if (buyer.garage[0] == null)
-            {
-                buyer.garage[0] = this;
-            }
-            if (buyer.garage[1] == null)
-            {
-                buyer.garage[1] = this;
-            }
-            if (buyer.garage[2] == null)
-            {
-                buyer.garage[2] = this;
-            }
-            this.owners[0] = this.owners[1];
-            this.owners[1] = this.owners[2];
-            this.owners[2] = buyer;
-
-            iloscTransakcji++;
 
 
-            seller.cash += price;
-            buyer.cash -= price;
+
+
+            seller.cash += cena;
+            buyer.cash -= cena;
 
             System.out.println("Transakcja sprzedazy auta powiodla sie");
         }
-        catch(IllegalAccessException e)
-        {
-            System.out.println("caught in main.");
-        }
+
     }
 
-    public int sprawdzIloscTransakcji()
-    {
-        return this.iloscTransakcji;
-    }
 
-    public boolean czyMialWlasciciela()
-    {
-        boolean result = true;
-        if(this.owners[0] == null && this.owners[1] == null && this.owners[2] == null)
-        {
-            result = false;
-        }
-        return result;
-    }
 
-    public boolean czyAsprzedalB(Human aaa, Human bbb)
-    {
-        if (this.owners[2] == bbb && this.owners[1] == aaa)
-        {
-            return true;
-        }
-        return false;
-    }*/
+
+
+
 
 
 
