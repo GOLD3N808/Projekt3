@@ -7,6 +7,7 @@ import com.company.devices.Phone;
 import com.company.devices.*;
 import com.company.devices.Diesel;
 import com.company.devices.Electric;
+import com.company.devices.LPG;
 import com.company.devices.Application;
 
 
@@ -25,17 +26,22 @@ public class Main {
 
                 PinkPretty.beEaten();*/
 
+                Human seller = new Human();
+                Human buyer = new Human();
                 Human gosc = new Human();
-                Car saab = new LPG("rgsg","ffff", "gg",565,344.0);
+                Car saab = new LPG("rgsg","ffff", "gg",565,344.0, seller);
                 gosc.getCar(1);
                 gosc.setCar(saab, 1);
                 //gosc.carsValue(345.7);
-                Human seller = new Human();
-                Human buyer = new Human();
+
                 buyer.cash = 1000.0;
                 seller.cash = 2000.0;
                 buyer.garage[0] = saab;
-                saab.sell(seller, buyer, 333.0);
+                saab.sell(seller, buyer, 3343.0);
+                saab.czyAsprzedalB(seller, buyer);
+                saab.czyPosiadalWlasiciela(buyer);
+                saab.numberTransakcji();
+                saab.sprawdzIloscTransakcji();
 
 
 

@@ -1,6 +1,8 @@
 package com.company.devices;
 import com.company.Human;
 import com.company.devices.salleable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.company.devices.Device;
 
@@ -11,19 +13,19 @@ public abstract class Car extends Device implements salleable {
 
     public String color;
     public Double value;
-    public Human[] owners;
-    public int iloscTransakcji;
     public double cena;
     public double rozmiar;
+    public List<Human> wlasciciele = new ArrayList();
+    public int jakaIloscTransakcji;
 
-    public Car(String producer, String model, int yearOfProduction, String color, Double value){
+    public Car(String producer, String model, int yearOfProduction, String color, Double value, Human wlasciciel){
         this.model = model;
         this.producer = producer;
         this.color = color;
         this.yearOfProduction = yearOfProduction;
         this.value = value;
-        this.owners = new Human[3];
-        this.iloscTransakcji = 0;
+        wlasciciele.add(wlasciciel);
+        this.jakaIloscTransakcji = 0;
 
 
     }
@@ -43,6 +45,7 @@ public abstract class Car extends Device implements salleable {
             {
                 System.out.println("Kupujacy nie ma pieniedzy");
             }
+            wlasciciele.add(buyer);
 
 
 
@@ -56,12 +59,38 @@ public abstract class Car extends Device implements salleable {
 
     }
 
+    public int sprawdzIloscTransakcji()
+    {
+        return this.jakaIloscTransakcji;
+    }
+
+    public boolean czyPosiadalWlasiciela(Human jakisCzlowiek)
+    {
+        return wlasciciele.contains(jakisCzlowiek);
+    }
+
+    public boolean czyAsprzedalB(Human seller, Human buyer)
+    {
+        if(this.czyPosiadalWlasiciela(seller) && this.czyPosiadalWlasiciela(buyer))
+            if (wlasciciele.indexOf(seller) == wlasciciele.indexOf(buyer)-1)
+                return true;
+
+        return false;
+    }
+
+    public int numberTransakcji()
+    {
+        return wlasciciele.size();
+    }
 
 
 
 
 
 
+    public boolean equals(Object obj) {
+        return (this == obj);
+    }
 
 
     public void TurnOn()
