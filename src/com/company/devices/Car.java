@@ -11,19 +11,21 @@ public abstract class Car extends Device implements salleable {
 
 
 
+
     public String color;
     public Double value;
     public double cena;
-    public double rozmiar;
+    //public double rozmiar;
     public List<Human> wlasciciele = new ArrayList();
     public int jakaIloscTransakcji;
 
-    public Car(String producer, String model, int yearOfProduction, String color, Double value, Human wlasciciel){
-        this.model = model;
+    public Car(String producer, String model, int yearOfProduction, String color, Double value, Double cena, Human wlasciciel){
         this.producer = producer;
-        this.color = color;
+        this.model = model;
         this.yearOfProduction = yearOfProduction;
+        this.color = color;
         this.value = value;
+        this.cena = cena;
         wlasciciele.add(wlasciciel);
         this.jakaIloscTransakcji = 0;
 
@@ -31,31 +33,114 @@ public abstract class Car extends Device implements salleable {
     }
     public void sell(Human seller, Human buyer, Double price)
     {
+        int n = 0;
+        int k = 0;
 
-        {
-            if (seller.garage == null && seller.garage.length == 0 )
+
+            if (seller.garage.length == 0 ) //sprawdzenie czy sprzedajacy posiada garaz
             {
-                System.out.println("Sprzedajacy nie ma samochodow");
+                System.out.println("Sprzedajacy nie ma garazu");
             }
-            if (buyer.garage != null)
+            else
             {
-                System.out.println("Kupujacy nie ma miejsca w garazu");
+                k++;
             }
-            if (buyer.cash < cena)
+
+            if (seller.garage.length != 0) // sprawdzenie czy garaz sprzedajacego jest pusty
+            {
+                k++;
+                for(int i =0; i<seller.garage.length; i++)
+                {
+                    if (seller.garage[i] == null )
+                    {
+                        n++;
+                    }
+                }
+                if (n == seller.garage.length)
+                {
+                    System.out.println("Sprzedajacy nie posiada samochodow");
+                }
+                else
+                {
+                    k++;
+                }
+            }
+            n =0;
+
+            for(int i =0; i<seller.garage.length; i++) // sprawdzenie czy sprzedajacy posiada wlasnie ten samochod
+            {
+                if (seller.garage[i] == this )
+                {
+                    n++;
+                }
+            }
+            if (n == 1)
+            {
+                k++;
+            }
+
+            n=0;
+
+            if (buyer.garage.length == 0 ) //sprawdzenie czy kupujacy posiada garaz
+            {
+                System.out.println("kupujacy nie posiada garazu");
+            }
+            else
+            {
+                k++;
+            }
+
+            if (buyer.garage.length != 0)  //sprawdzenie czy w garazu kupujacego jest miejsce
+            {
+                k++;
+                for (int i = 0; i < buyer.garage.length; i++)
+                {
+                    if (buyer.garage[i] != null)
+                        n++;
+                }
+                if (n == buyer.garage.length)
+                {
+                    System.out.println("kupujacy nie ma miejsca w garazu");
+                }
+                else
+                {
+                    k++;
+                }
+            }
+
+
+            if (buyer.cash < cena) // sprawdzenie czy kupujacy ma dosc pieniedzy
             {
                 System.out.println("Kupujacy nie ma pieniedzy");
             }
-            wlasciciele.add(buyer);
+            else
+            {
+                k++;
+            }
 
+            if(k==8)
+            {
+                wlasciciele.add(buyer);
 
+                for (int i = 0; i < seller.garage.length; i++) {
+                    if (seller.garage[i] == this)
+                    {
+                        seller.garage[i] = null;
+                    }
+                }
 
+                for (int i = 0; i < buyer.garage.length; i++) {
+                    if (buyer.garage[i] == null)
+                    {
+                        buyer.garage[i] = this;
+                    }
+                }
 
+                seller.cash += cena;
+                buyer.cash -= cena;
 
-            seller.cash += cena;
-            buyer.cash -= cena;
-
-            System.out.println("Transakcja sprzedazy auta powiodla sie");
-        }
+                System.out.println("Transakcja sprzedazy auta powiodla sie");
+            }
 
     }
 

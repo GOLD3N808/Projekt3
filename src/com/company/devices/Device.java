@@ -5,7 +5,7 @@ public abstract class Device implements salleable {
 
      String producer;
      String model;
-     int yearOfProduction;
+     public int yearOfProduction;
      public double value;
 
         public void sell(Human seller, Human buyer, Double price)

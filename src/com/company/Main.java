@@ -26,22 +26,32 @@ public class Main {
 
                 PinkPretty.beEaten();*/
 
-                Human seller = new Human();
-                Human buyer = new Human();
-                Human gosc = new Human();
-                Car saab = new LPG("rgsg","ffff", "gg",565,344.0, seller);
-                gosc.getCar(1);
-                gosc.setCar(saab, 1);
+                //Human seller = new Human();
+                //Human buyer = new Human();
+                //Human gosc = new Human();
+
+                Human seller = new Human(2);
+                Human buyer = new Human(3);
+
+                Car saab = new LPG("rgsg","ffff", 1995,"black",344.0, 3343.0, seller);
+                //gosc.getCar(1);
+                //gosc.setCar(saab, 1);
+                //buyer.getCar(1);
+                //buyer.setCar(saab, 1);
                 //gosc.carsValue(345.7);
 
-                buyer.cash = 1000.0;
+                seller.salary = 3000.0;
+                seller.getCar(1);
+                seller.setCar(saab, 1);
+
+                buyer.cash = 3000.0;
                 seller.cash = 2000.0;
-                buyer.garage[0] = saab;
+               // buyer.garage[0] = saab;
                 saab.sell(seller, buyer, 3343.0);
-                saab.czyAsprzedalB(seller, buyer);
-                saab.czyPosiadalWlasiciela(buyer);
-                saab.numberTransakcji();
-                saab.sprawdzIloscTransakcji();
+                //saab.czyAsprzedalB(seller, buyer);
+               // saab.czyPosiadalWlasiciela(buyer);
+                //saab.numberTransakcji();
+               // saab.sprawdzIloscTransakcji();
 
 
 

@@ -17,10 +17,10 @@ public class Human {
     Animal pet;
 
     private String pesel;
-    public Double cash = 0.0;
-    public Double salary;
+    public double cash = 0.0;
+    public double salary;
     public Car[] garage;
-    public double rozmiar;
+    //public double rozmiar;
 
 
 
@@ -28,18 +28,20 @@ public class Human {
 
     public Human()
     {
-        garage = new Car[5];
+        garage = new Car[2];
     }
 
-   /* public garageHuman()
+    public Human(int rozmiar)
     {
-        this.rozmiar = rozmiar;
-    }*/
+        this.garage = new Car[rozmiar];
+    }
 
     public Car getCar( int nrMiejscaParkingowego)
     {
         return this.garage[nrMiejscaParkingowego];
     }
+
+
 
     public void setCar(Car noweAuto, int nrMiejscaParkingowego)
     {
@@ -59,6 +61,13 @@ public class Human {
         }
     }
 
+   /* public void sortCars()
+    {
+        Arrays.sort();
+
+        garage[1].yearOfProduction = 23;
+    }*/
+
     public double carsValue(Device wartosc)
     {
          wartosc.value = 0.0;
@@ -72,10 +81,7 @@ public class Human {
         return wartosc.value;
     }
 
-   /* public void sortowanieSamochodow()
-    {
 
-    }*/
 
 
 
