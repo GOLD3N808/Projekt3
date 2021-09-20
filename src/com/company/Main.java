@@ -10,6 +10,10 @@ import com.company.devices.Electric;
 import com.company.devices.LPG;
 import com.company.devices.Application;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 
 public class Main {
 
@@ -33,12 +37,30 @@ public class Main {
                 Human seller = new Human(2);
                 Human buyer = new Human(3);
 
-                Car saab = new LPG("rgsg","ffff", 1995,"black",344.0, 3343.0, seller);
+                Car saab = new LPG("saab","900", 1995,"black",344.0, 3343.0, seller);
+                Car toyota = new LPG("toyota","avensis", 1997,"black",344.0, 3445.0, seller);
+                Car skoda = new LPG("skoda","fabia", 1996,"yellow",344.0, 5343.0, seller);
+                Car lambo = new LPG("lamborgini","jakiestam", 2010,"white",344.0, 33343.0, seller);
                 //gosc.getCar(1);
                 //gosc.setCar(saab, 1);
                 //buyer.getCar(1);
                 //buyer.setCar(saab, 1);
                 //gosc.carsValue(345.7);
+
+
+                        List<Car> cars = new ArrayList<>(); //sortowanie wg rocznika
+
+                        cars.add(saab);
+                        cars.add(toyota);
+                        cars.add(skoda);
+                        cars.add(lambo);
+
+
+                        Collections.sort(cars);
+
+                        System.out.println(cars);
+
+
 
                 seller.salary = 3000.0;
                 seller.getCar(1);

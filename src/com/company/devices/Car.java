@@ -2,12 +2,13 @@ package com.company.devices;
 import com.company.Human;
 import com.company.devices.salleable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.company.devices.Device;
 
 
-public abstract class Car extends Device implements salleable {
+public abstract class Car extends Device implements Comparable<Car> {
 
 
 
@@ -143,6 +144,23 @@ public abstract class Car extends Device implements salleable {
             }
 
     }
+
+
+
+
+    @Override
+    public int compareTo(Car o)
+    {
+        return this.yearOfProduction - o.yearOfProduction;
+    }
+
+    @Override
+    public String toString(){
+       return " producer: "+producer+ " model: "+ model+" color: "+color+" yearOfProduction: "+ yearOfProduction +" value: "+value;
+
+
+    }
+
 
     public int sprawdzIloscTransakcji()
     {
